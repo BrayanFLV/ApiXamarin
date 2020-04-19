@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarinProyecto.Nintendo">
+    <ScrollView>
+        <Grid>
+
+            <Image Source="fondo.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="Crimson" Opacity="0.8"></BoxView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto "></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto "></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="nitendo2.jpg" HeightRequest="180" Aspect="AspectFill"></Image>
+                <StackLayout Grid.Row="1" Padding="30,0.5">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="NINTENDO " FontSize="Large"  TextColor="White" Padding="0,10" FontAttributes="Bold"></Label>
+                        <StackLayout Orientation="Vertical">
+                            <Button Text="Compras"  BackgroundColor="AliceBlue" TextColor="Black" CornerRadius="30" ></Button>
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                    <ListView x:Name="nintendo1">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="DarkRed" HeightRequest="400" CornerRadius="30">
+                                        <StackLayout BackgroundColor="DarkRed">
+                                            <Label Text="{Binding nombre}" HorizontalOptions="Center" FontSize="Medium" TextColor="White"></Label>
+                                            <Image Source="{Binding imagen}" Aspect="AspectFill" HeightRequest="300"></Image>
+                                            <Label Text="{Binding precio}" HorizontalOptions="Center" FontSize="Medium" TextColor="White"></Label>
+                                            <Button Text="COMPRAR" BackgroundColor="AliceBlue" TextColor="Black" CornerRadius="30" ></Button>
+                                            <Label Text=" "></Label>
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                   
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+
+
+    </ScrollView>
+</ContentPage>

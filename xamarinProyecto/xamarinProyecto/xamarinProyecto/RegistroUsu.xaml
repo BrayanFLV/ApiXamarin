@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarinProyecto.RegistroUsu">
+    <ScrollView>
+
+        <Grid>
+
+            <Image Source="fondo.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="DarkSlateBlue" Opacity="0.8"></BoxView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto "></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto "></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="gamer.png" WidthRequest="150" HeightRequest="150" Margin="0,50,0,30"></Image>
+
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="correo electronico" PlaceholderColor="White" TextColor="White"></Entry>
+                    <Entry Placeholder="Nombre de usuario" PlaceholderColor="White" TextColor="White"></Entry>
+                    <Entry Placeholder="telefono" PlaceholderColor="White" TextColor="White"></Entry>
+                    <Entry Placeholder="direccion" PlaceholderColor="White" TextColor="White"></Entry>
+                    <Entry Placeholder="Contraseña" PlaceholderColor="White" IsPassword="True" TextColor="White"></Entry>
+                    <Button Text="REGISTARSE" BorderRadius="9" TextColor="DarkSlateBlue"></Button>
+
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,100">
+                    <Label Text="Iniciar sesion con" HorizontalOptions="Center" FontSize="Medium" TextColor="White"></Label>
+                    <StackLayout Orientation="Horizontal" >
+                        <Image Grid.Row="0" Source="face.png" WidthRequest="70" HeightRequest="70" ></Image>
+
+                        <Image Grid.Row="0" Source="tui.png" WidthRequest="70" HeightRequest="70" ></Image>
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarinProyecto.Usuarios">
+    <ScrollView>
+        <Grid>
+
+            <Image Source="fondo.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="#41F7B3" Opacity="0.8"></BoxView>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto "></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto "></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="personas.jpg" HeightRequest="180" Aspect="AspectFill"></Image>
+                <StackLayout Grid.Row="1" Padding="30,0.5">
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="USUARIOS" FontSize="Large"  TextColor="White" Padding="0,10" FontAttributes="Bold"></Label>
+                        <StackLayout Grid.Row="1" Orientation="Vertical">
+                            <Button Text="AGREGAR"  BackgroundColor="AliceBlue" TextColor="Black" CornerRadius="15" WidthRequest="500" ></Button>
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                    <ListView x:Name="usuarios1">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame BackgroundColor="#AAF3D7" HeightRequest="700" CornerRadius="30">
+                                        <StackLayout BackgroundColor="#AAF3D7">
+                                            <Label Text="NOMBRE:" TextColor="Black" FontSize="Large"></Label>
+                                            <Label Text="{Binding nombre}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                                            <Label Text="CORREO:" TextColor="Black" FontSize="Large"></Label>
+                                            <Label Text="{Binding correo}"  TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                                            <Label Text="TELEFONO:" TextColor="Black" FontSize="Large"></Label>
+                                            <Label Text="{Binding telefono}"  TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                                            <Label Text="DIRECCION:" TextColor="Black" FontSize="Large"></Label>
+                                            <Label Text="{Binding direccion}"  TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                                            <Label Text="CONTRASEÑA:" TextColor="Black" FontSize="Large"></Label>
+                                            <Label Text="{Binding contrasena}"  TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+
+                                            
+                                            <Button Text="EDITAR" BackgroundColor="#FF842F" TextColor="White" CornerRadius="30" ></Button>
+                                            <Button Text="ELIMINAR" BackgroundColor="#BE4949" TextColor="White" CornerRadius="30" ></Button>
+                                            <Label Text=" "></Label>
+                                            
+                                            
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>
